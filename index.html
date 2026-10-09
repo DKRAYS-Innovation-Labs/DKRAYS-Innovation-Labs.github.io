@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<meta name="description" content="DKRAYS Innovation Labs — Creative design, branding, AI-assisted product visuals and premium digital experiences.">
-<title>DKRAYS Innovation Labs | Creative Intelligence Studio</title>
+<meta name="description" content="DKRAYS Innovation Labs — Creative branding, AI-assisted visual design, product advertising and premium digital experiences.">
+<title>DKRAYS Innovation Labs | Where Creativity Meets Intelligence</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,401 +14,26 @@
 
 <style>
 :root{
-  --ink:#20203d;
-  --muted:#6d6c83;
-  --purple:#7853df;
-  --line:#e9e5f5;
-  --gradient:linear-gradient(110deg,#7853df,#388fef,#ed75c7);
+  --ink:#22213f;
+  --muted:#6d6b83;
+  --purple:#7055dc;
+  --blue:#5c88e8;
+  --pink:#d77ac5;
+  --line:#e8e3f4;
+  --gradient:linear-gradient(110deg,#7055dc,#5c88e8,#d77ac5);
 }
-
 *{box-sizing:border-box}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:115px;
-}
-
+html{scroll-behavior:smooth;scroll-padding-top:110px}
 body{
   margin:0;
-  font-family:"DM Sans",Arial,sans-serif;
+  font-family:"DM Sans",sans-serif;
   color:var(--ink);
   background:#fff;
-  line-height:1.6;
+  line-height:1.65;
 }
-
 a{text-decoration:none;color:inherit}
 img{max-width:100%}
-
-.container{
-  max-width:1120px;
-  margin:auto;
-  padding:0 24px;
-}
-
-/* HEADER */
-
-.dkr-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  border-bottom:1px solid #ece5ff;
-  box-shadow:0 7px 28px rgba(90,65,160,.07);
-}
-
-.dkr-nav{
-  max-width:1400px;
-  margin:auto;
-  min-height:88px;
-  padding:12px 4%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:22px;
-}
-
-.dkr-brand{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  flex-shrink:0;
-}
-
-.dkr-brand-icon{
-  width:46px;
-  height:46px;
-  display:grid;
-  place-items:center;
-  border-radius:15px;
-  background:var(--gradient);
-  color:white;
-  font-size:25px;
-  box-shadow:0 7px 20px rgba(120,83,223,.24);
-}
-
-.dkr-brand-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.15;
-}
-
-.dkr-brand-name{
-  font-size:29px;
-  font-weight:900;
-  letter-spacing:-1px;
-  background:var(--gradient);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.dkr-brand-subtitle{
-  margin-top:5px;
-  color:#56506f;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:3px;
-  white-space:nowrap;
-}
-
-.dkr-menu{
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  gap:5px;
-  flex-wrap:wrap;
-}
-
-.dkr-menu a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:11px 14px;
-  border-radius:30px;
-  color:#34304f;
-  font-size:14px;
-  font-weight:700;
-  transition:.25s;
-}
-
-.dkr-menu a:hover,
-.dkr-menu a:focus-visible{
-  background:#f1ecff;
-  color:#7853df;
-}
-
-.dkr-menu .dkr-cta{
-  background:var(--gradient);
-  color:#fff;
-  padding:12px 21px;
-  margin-left:6px;
-  white-space:nowrap;
-  box-shadow:0 6px 20px rgba(120,83,223,.24);
-}
-
-.dkr-menu .dkr-cta:hover,
-.dkr-menu .dkr-cta:focus-visible{
-  color:#fff;
-  transform:translateY(-2px);
-}
-
-/* HERO */
-
-.hero{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden;
-  padding:36px 0 56px;
-  background:
-    radial-gradient(ellipse at 9% 18%,rgba(121,99,236,.12),transparent 43%),
-    radial-gradient(ellipse at 91% 75%,rgba(234,123,203,.12),transparent 42%),
-    linear-gradient(140deg,#fcfbff,#fff 60%,#fcf9ff);
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  width:500px;
-  height:500px;
-  top:-300px;
-  right:-190px;
-  border-radius:50%;
-  background:linear-gradient(130deg,#7957eb22,#54a3f522,#ee8ec822);
-  filter:blur(35px);
-  z-index:-1;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.12fr .88fr;
-  gap:58px;
-  align-items:start;
-}
-
-.hero-content{
-  padding-top:12px;
-}
-
-.hero-kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:9px 15px;
-  border:1px solid #e4dcfa;
-  border-radius:100px;
-  background:rgba(255,255,255,.85);
-  color:#6e51cb;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1.6px;
-  text-transform:uppercase;
-}
-
-.kicker-dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#8062e7;
-  box-shadow:0 0 0 4px #8062e71a;
-}
-
-.hero-heading{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(37px,3.65vw,54px);
-  font-weight:800;
-  line-height:1.2;
-  letter-spacing:-2.4px;
-  margin:25px 0 18px;
-  color:#22213f;
-  max-width:650px;
-}
-
-.hero-heading .line{
-  display:block;
-}
-
-.hero-heading .gradient-word{
-  background:linear-gradient(105deg,#7950e7,#4b85ee 52%,#d46bc4);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.hero-secondary{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin:0 0 19px;
-  color:#66538e;
-  font-size:15px;
-  font-weight:800;
-}
-
-.hero-secondary::before{
-  content:"";
-  display:block;
-  width:27px;
-  height:2px;
-  flex-shrink:0;
-  background:linear-gradient(90deg,#7950e7,#d46bc4);
-}
-
-.hero-description{
-  max-width:505px;
-  color:#74718a;
-  font-size:15px;
-  line-height:1.85;
-  margin:0;
-}
-
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-  margin-top:27px;
-}
-
-.hero-btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:13px;
-  padding:14px 22px;
-  border-radius:13px;
-  font-size:13px;
-  font-weight:800;
-  transition:transform .25s,box-shadow .25s;
-}
-
-.hero-btn:hover{
-  transform:translateY(-3px);
-}
-
-.hero-btn.primary{
-  color:white;
-  background:linear-gradient(110deg,#7753e5,#527de9,#c773d0);
-  box-shadow:0 12px 27px rgba(110,84,219,.2);
-}
-
-.hero-btn.secondary{
-  background:rgba(255,255,255,.9);
-  border:1px solid #ded7f1;
-  color:#5d4a96;
-}
-
-.hero-specialties{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
-  padding-top:19px;
-  border-top:1px solid #e9e5f4;
-}
-
-.hero-specialties span{
-  color:#77718f;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1.1px;
-  text-transform:uppercase;
-}
-
-.hero-specialties .sep{
-  color:#ad96e4;
-}
-
-.hero-visual{
-  position:relative;
-  padding:16px;
-  border:1px solid rgba(217,207,242,.85);
-  border-radius:30px;
-  background:rgba(255,255,255,.7);
-  box-shadow:0 28px 75px rgba(87,62,148,.11);
-}
-
-.hero-visual::before{
-  content:"";
-  position:absolute;
-  inset:-9px;
-  border:1px solid rgba(149,115,230,.12);
-  border-radius:37px;
-  pointer-events:none;
-}
-
-.hero-visual img{
-  display:block;
-  width:100%;
-  border-radius:20px;
-}
-
-.visual-caption{
-  position:absolute;
-  bottom:-17px;
-  left:28px;
-  display:flex;
-  align-items:center;
-  gap:9px;
-  padding:11px 17px;
-  border:1px solid #e8dff8;
-  border-radius:50px;
-  background:#fff;
-  box-shadow:0 12px 28px rgba(86,59,155,.12);
-  color:#625189;
-  font-size:11px;
-  font-weight:800;
-}
-
-.visual-caption span{
-  color:#8a5bea;
-  font-size:17px;
-}
-
-@keyframes heroReveal{
-  from{opacity:0;transform:translateY(12px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.hero-content{
-  animation:heroReveal .65s ease both;
-}
-
-.hero-visual{
-  animation:heroReveal .8s .08s ease both;
-}
-
-/* GENERAL SECTIONS */
-
-section{
-  padding:85px 0;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.section-title h2{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(30px,4vw,43px);
-  letter-spacing:-1.5px;
-  margin:8px 0;
-}
-
-.section-title p{
-  color:var(--muted);
-}
-
-.eyebrow{
-  color:var(--purple);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
+.container{max-width:1160px;margin:auto;padding:0 24px}
 .gradient-text{
   background:var(--gradient);
   -webkit-background-clip:text;
@@ -416,14 +41,358 @@ section{
   color:transparent;
 }
 
-.soft{background:#faf9ff}
+/* HEADER */
+.dkr-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #ece6f7;
+  box-shadow:0 6px 24px rgba(69,49,121,.045);
+}
+.dkr-nav{
+  max-width:1440px;
+  min-height:86px;
+  margin:auto;
+  padding:12px 4%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.dkr-brand{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
+}
+.dkr-brand-icon{
+  width:45px;
+  height:45px;
+  border-radius:14px;
+  background:var(--gradient);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+}
+.dkr-brand-text{display:flex;flex-direction:column;line-height:1.15}
+.dkr-brand-name{
+  font-family:"Manrope",sans-serif;
+  font-size:27px;
+  font-weight:800;
+  letter-spacing:-1.3px;
+  color:#292540;
+}
+.dkr-brand-name span{color:#7854df}
+.dkr-brand-subtitle{
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2.9px;
+  color:#6e638e;
+  margin-top:4px;
+}
+.dkr-menu{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:4px;
+}
+.dkr-menu a{
+  padding:10px 13px;
+  font-size:14px;
+  font-weight:700;
+  border-radius:30px;
+  transition:.25s;
+}
+.dkr-menu a:hover{background:#f1edff;color:var(--purple)}
+.dkr-menu .dkr-cta{
+  color:#fff;
+  background:var(--gradient);
+  padding:12px 21px;
+  margin-left:7px;
+  box-shadow:0 8px 22px rgba(112,85,220,.19);
+}
+.dkr-menu .dkr-cta:hover{color:#fff;transform:translateY(-2px)}
 
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:34px 0 49px;
+  background:
+    radial-gradient(ellipse at 8% 15%,rgba(119,91,224,.11),transparent 44%),
+    radial-gradient(ellipse at 95% 75%,rgba(217,122,197,.11),transparent 43%),
+    linear-gradient(145deg,#fcfbff,#fff 60%,#fcf9ff);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.12fr .88fr;
+  align-items:start;
+  gap:50px;
+}
+.hero-content{padding-top:10px}
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 15px;
+  background:#fff;
+  border:1px solid #e5ddfa;
+  border-radius:100px;
+  color:#6d51ce;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+.kicker-dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  background:#8062e7;
+  box-shadow:0 0 0 4px #8062e71c;
+}
+.hero-heading{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(37px,3.8vw,56px);
+  line-height:1.17;
+  letter-spacing:-2.5px;
+  font-weight:800;
+  margin:24px 0 18px;
+}
+.hero-heading .line{display:block}
+.hero-heading .highlight{
+  background:linear-gradient(105deg,#7950e7,#4b85ee 55%,#d46bc4);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero-secondary{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:#65558b;
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:17px;
+}
+.hero-secondary:before{
+  content:"";
+  width:27px;height:2px;
+  background:var(--gradient);
+  flex-shrink:0;
+}
+.hero-description{
+  color:#706d85;
+  font-size:15px;
+  line-height:1.85;
+  max-width:515px;
+  margin:0;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 22px;
+  border-radius:13px;
+  font-weight:800;
+  font-size:13px;
+  transition:.25s;
+}
+.hero-btn:hover{transform:translateY(-3px)}
+.hero-btn.primary{
+  color:#fff;
+  background:var(--gradient);
+  box-shadow:0 10px 26px rgba(110,84,219,.18);
+}
+.hero-btn.secondary{
+  color:#625098;
+  background:#fff;
+  border:1px solid #e2d9f4;
+}
+.hero-specialties{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:11px;
+  border-top:1px solid #e9e5f4;
+  padding-top:18px;
+  margin-top:29px;
+  color:#79738f;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.hero-specialties .sep{color:#ac96e3}
+.hero-visual{
+  position:relative;
+  padding:15px;
+  border:1px solid #e1d9f5;
+  border-radius:29px;
+  background:rgba(255,255,255,.8);
+  box-shadow:0 23px 60px rgba(87,62,148,.09);
+}
+.hero-visual img{
+  width:100%;
+  display:block;
+  border-radius:19px;
+}
+.visual-caption{
+  position:absolute;
+  bottom:-17px;
+  left:28px;
+  padding:10px 17px;
+  border-radius:40px;
+  border:1px solid #e8dff8;
+  background:white;
+  color:#66548d;
+  font-size:11px;
+  font-weight:800;
+  box-shadow:0 10px 25px rgba(86,59,155,.09);
+}
+
+/* ABOUT — PREMIUM REDESIGN */
+#about{
+  padding:48px 0 52px;
+  background:#fff;
+}
+.about-layout{
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:54px;
+  align-items:center;
+}
+.about-left{
+  position:relative;
+  padding-left:23px;
+}
+.about-left:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:7px;
+  bottom:8px;
+  width:3px;
+  border-radius:10px;
+  background:var(--gradient);
+}
+.about-label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#7c61d5;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2.1px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.about-label:before{
+  content:"01";
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  border:1px solid #e5dcf8;
+  border-radius:9px;
+  background:#f7f4ff;
+  color:#7453d5;
+  font-size:11px;
+  letter-spacing:0;
+}
+.about-heading{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(31px,3.2vw,45px);
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-1.8px;
+  margin:0;
+}
+.about-right{
+  padding:28px 30px;
+  border:1px solid #e9e3f7;
+  border-radius:22px;
+  background:linear-gradient(145deg,#fdfcff,#f8f7ff);
+  box-shadow:0 14px 35px rgba(70,49,129,.045);
+}
+.about-lead{
+  color:#34324e;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.65;
+  margin:0 0 12px;
+}
+.about-description{
+  color:#716d84;
+  font-size:14px;
+  line-height:1.85;
+  margin:0;
+}
+.about-cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px;
+  margin-top:23px;
+}
+.about-mini-card{
+  border:1px solid #e8e2f5;
+  border-radius:15px;
+  padding:17px 13px;
+  background:#fff;
+  text-align:center;
+  transition:.25s;
+}
+.about-mini-card:hover{
+  transform:translateY(-4px);
+  border-color:#c9b8f4;
+  box-shadow:0 9px 22px rgba(90,70,150,.07);
+}
+.about-mini-icon{
+  display:grid;
+  place-items:center;
+  width:35px;
+  height:35px;
+  margin:0 auto 11px;
+  border-radius:11px;
+  background:linear-gradient(135deg,#ede8ff,#e9f0ff);
+  color:#7358d8;
+  font-size:18px;
+  font-weight:800;
+}
+.about-mini-card strong{
+  display:block;
+  color:#3a3555;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.5;
+}
+
+/* COMMON SECTIONS */
+section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:39px}
+.section-title h2{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(30px,4vw,43px);
+  letter-spacing:-1.5px;
+  margin:8px 0;
+}
+.section-title p{color:var(--muted);margin:8px 0}
+.eyebrow{
+  color:var(--purple);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.soft{background:#faf9ff}
 .grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:22px;
 }
-
 .card{
   padding:28px;
   background:#fff;
@@ -431,117 +400,23 @@ section{
   border-radius:22px;
   box-shadow:0 10px 35px #2d1d6710;
 }
-
-.card h3{
-  margin:12px 0;
-  font-size:20px;
-}
-
-.card p{
-  color:var(--muted);
-  margin:0;
-}
-
+.card h3{margin:12px 0;font-size:20px}
+.card p{color:var(--muted);margin:0}
 .symbol{font-size:32px}
-
 .price{
   margin-top:24px;
   font-size:30px;
-  font-weight:850;
+  font-weight:800;
   color:var(--purple);
 }
-
-.price small{
-  font-size:13px;
-  font-weight:500;
-  color:var(--muted);
-}
-
-/* UPDATED ABOUT SECTION */
-
-#about{
-  padding:45px 0 48px;
-  background:#fff;
-}
-
-.about-inner{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-.about-eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:#7853df;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:2.1px;
-  text-transform:uppercase;
-}
-
-.about-eyebrow::before,
-.about-eyebrow::after{
-  content:"";
-  width:20px;
-  height:1px;
-  background:#b7a1ed;
-}
-
-.about-heading{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(30px,3.8vw,45px);
-  font-weight:800;
-  line-height:1.22;
-  letter-spacing:-1.7px;
-  margin:15px auto 17px;
-}
-
-.about-description{
-  max-width:780px;
-  margin:0 auto;
-  font-size:16px;
-  line-height:1.85;
-  color:#6e6b82;
-}
-
-.about-expertise{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:25px;
-}
-
-.about-expertise span{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:9px 16px;
-  border-radius:30px;
-  background:#f9f7ff;
-  border:1px solid #e9e2fa;
-  color:#62518d;
-  font-size:12px;
-  font-weight:750;
-}
-
-.about-expertise span::before{
-  content:"✦";
-  color:#9571e8;
-  font-size:11px;
-}
+.price small{font-size:13px;font-weight:500;color:var(--muted)}
 
 /* PORTFOLIO */
-
 .portfolio-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:22px;
 }
-
 .portfolio-card{
   display:block;
   background:#fff;
@@ -549,14 +424,12 @@ section{
   border-radius:22px;
   overflow:hidden;
   box-shadow:0 12px 35px #31235a12;
-  transition:.2s;
+  transition:.25s;
 }
-
 .portfolio-card:hover{
   transform:translateY(-5px);
-  box-shadow:0 20px 40px #31235a22;
+  box-shadow:0 20px 40px #31235a20;
 }
-
 .portfolio-card img{
   display:block;
   width:100%;
@@ -565,49 +438,26 @@ section{
   object-position:top;
   background:#f5f0ff;
 }
-
-.portfolio-body{
-  padding:18px 20px 22px;
-}
-
-.portfolio-body h3{
-  font-size:19px;
-  margin:0 0 6px;
-}
-
-.portfolio-body p{
-  font-size:14px;
-  color:var(--muted);
-  margin:0 0 12px;
-}
-
-.view{
-  font-size:13px;
-  color:var(--purple);
-  font-weight:700;
-}
+.portfolio-body{padding:18px 20px 22px}
+.portfolio-body h3{font-size:19px;margin:0 0 6px}
+.portfolio-body p{font-size:14px;color:var(--muted);margin:0 0 12px}
+.view{font-size:13px;color:var(--purple);font-weight:700}
 
 /* PRICING */
-
 .pricing-section{
-  padding:95px 0 105px;
+  padding:90px 0 100px;
   background:
     radial-gradient(ellipse at 8% 12%,#e9e5ff,transparent 38%),
     radial-gradient(ellipse at 95% 82%,#ffe5f3,transparent 38%),
     #faf9ff;
 }
-
-.pricing-section .section-title{
-  margin-bottom:55px;
-}
-
+.pricing-section .section-title{margin-bottom:55px}
 .pricing-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:22px;
   align-items:stretch;
 }
-
 .plan-card{
   position:relative;
   display:flex;
@@ -617,21 +467,15 @@ section{
   border-radius:28px;
   background:#fff;
   box-shadow:0 15px 40px rgba(63,39,120,.07);
-  transition:.2s;
+  transition:.25s;
   min-width:0;
 }
-
-.plan-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 22px 55px rgba(63,39,120,.13);
-}
-
+.plan-card:hover{transform:translateY(-6px)}
 .plan-card.popular{
   border:2px solid #9272f1;
   background:linear-gradient(180deg,#f7f2ff,#fff 34%);
   box-shadow:0 22px 55px rgba(112,72,216,.15);
 }
-
 .popular-ribbon{
   position:absolute;
   top:-19px;
@@ -646,18 +490,15 @@ section{
   letter-spacing:1px;
   font-weight:800;
 }
-
 .plan-icon{
   display:grid;
   place-items:center;
-  width:52px;
-  height:52px;
+  width:52px;height:52px;
   border-radius:17px;
   background:linear-gradient(135deg,#eee7ff,#fbe5f6);
   color:#7853df;
   font-size:29px;
 }
-
 .plan-tier{
   font-size:11px;
   letter-spacing:1.8px;
@@ -665,48 +506,20 @@ section{
   color:#8d72d6;
   margin-top:22px;
 }
-
-.plan-card h3{
-  font-size:30px;
-  line-height:1.2;
-  margin:7px 0 9px;
-}
-
-.plan-intro{
-  color:#77738e;
-  font-size:14px;
-  min-height:45px;
-  margin:0;
-}
-
+.plan-card h3{font-size:30px;line-height:1.2;margin:7px 0 9px}
+.plan-intro{color:#77738e;font-size:14px;min-height:45px;margin:0}
 .plan-cost{
   font-size:clamp(27px,2.5vw,38px);
   line-height:1.2;
   letter-spacing:-1.3px;
-  font-weight:850;
+  font-weight:800;
   color:#6f46d6;
   margin:22px 0 20px;
   white-space:nowrap;
 }
-
-.plan-cost span{
-  font-size:13px;
-  letter-spacing:0;
-  font-weight:500;
-  color:#77738e;
-}
-
-.plan-divider{
-  height:1px;
-  background:#ebe6f5;
-}
-
-.plan-includes{
-  font-size:13px;
-  font-weight:800;
-  margin:22px 0 8px;
-}
-
+.plan-cost span{font-size:13px;letter-spacing:0;font-weight:500;color:#77738e}
+.plan-divider{height:1px;background:#ebe6f5}
+.plan-includes{font-size:13px;font-weight:800;margin:22px 0 8px}
 .plan-features{
   list-style:none;
   padding:0;
@@ -717,27 +530,19 @@ section{
   font-size:14px;
   flex:1;
 }
-
-.plan-features li{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-}
-
-.plan-features li::before{
+.plan-features li{display:flex;align-items:flex-start;gap:10px}
+.plan-features li:before{
   content:"✓";
   display:grid;
   place-items:center;
   flex-shrink:0;
-  width:21px;
-  height:21px;
+  width:21px;height:21px;
   border-radius:50%;
   background:#efe8ff;
   color:#7450d9;
   font-weight:900;
   font-size:12px;
 }
-
 .plan-button{
   display:flex;
   align-items:center;
@@ -748,48 +553,23 @@ section{
   font-weight:800;
   transition:.2s;
 }
-
-.plan-button:hover{
-  transform:translateY(-2px);
-}
-
+.plan-button:hover{transform:translateY(-2px)}
 .plan-button.outline{
   border:1px solid #c8b7ef;
   color:#7450d9;
   background:#f9f6ff;
 }
-
-.plan-button.filled{
-  background:var(--gradient);
-  color:#fff;
-}
-
-.pricing-footnote{
-  text-align:center;
-  color:#77738e;
-  margin:35px auto 0;
-  font-size:14px;
-}
-
-.pricing-footnote a{
-  color:#7853df;
-  font-weight:750;
-}
+.plan-button.filled{background:var(--gradient);color:#fff}
+.pricing-footnote{text-align:center;color:#77738e;margin:35px auto 0;font-size:14px}
+.pricing-footnote a{color:#7853df;font-weight:750}
 
 /* CONTACT */
-
 #contact{
   background:linear-gradient(145deg,#faf7ff,#f4f7ff,#fff5fb);
   position:relative;
   overflow:hidden;
 }
-
-.contact-shell{
-  max-width:1080px;
-  margin:auto;
-  text-align:center;
-}
-
+.contact-shell{max-width:1080px;margin:auto;text-align:center}
 .contact-kicker{
   display:inline-flex;
   align-items:center;
@@ -803,7 +583,6 @@ section{
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
-
 .contact-heading{
   font-family:"Manrope",sans-serif;
   font-size:clamp(36px,5vw,58px);
@@ -812,14 +591,12 @@ section{
   margin:22px auto 14px;
   max-width:790px;
 }
-
 .contact-intro{
   font-size:17px;
   color:#67647e;
   max-width:620px;
   margin:0 auto 25px;
 }
-
 .contact-main-cta{
   display:inline-flex;
   align-items:center;
@@ -833,21 +610,18 @@ section{
   font-weight:800;
   box-shadow:0 15px 32px #895cce3b;
 }
-
 .contact-prompt{
   display:block;
   color:#77738c;
   font-size:13px;
   margin:13px 0 38px;
 }
-
 .contact-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:18px;
   text-align:left;
 }
-
 .contact-card{
   display:flex;
   flex-direction:column;
@@ -861,43 +635,28 @@ section{
   overflow-wrap:anywhere;
   transition:.2s;
 }
-
-.contact-card:hover{
-  transform:translateY(-5px);
-}
-
+.contact-card:hover{transform:translateY(-5px)}
 .contact-card.whatsapp{
   background:linear-gradient(150deg,#f2fff7,#fff);
   border-color:#b9efd0;
 }
-
 .contact-icon{
   display:grid;
   place-items:center;
-  width:46px;
-  height:46px;
+  width:46px;height:46px;
   border-radius:15px;
   background:#f1e9ff;
   font-size:22px;
   margin-bottom:17px;
 }
-
-.contact-card strong{
-  font-size:19px;
-  margin-bottom:4px;
-}
-
+.contact-card strong{font-size:19px;margin-bottom:4px}
 .contact-detail{
   font-size:14px;
   font-weight:650;
   color:#7853df;
   overflow-wrap:anywhere;
 }
-
-.whatsapp .contact-detail{
-  color:#18854c;
-}
-
+.whatsapp .contact-detail{color:#18854c}
 .contact-link{
   margin-top:auto;
   padding-top:22px;
@@ -905,13 +664,7 @@ section{
   font-weight:750;
   font-size:14px;
 }
-
-.contact-footnote{
-  margin:32px auto 0;
-  font-size:14px;
-  color:#77738c;
-}
-
+.contact-footnote{margin:32px auto 0;font-size:14px;color:#77738c}
 .floating-wa{
   position:fixed;
   right:22px;
@@ -924,205 +677,66 @@ section{
   box-shadow:0 8px 25px #22c55e55;
   font-weight:750;
 }
-
 footer{
   background:#211b3d;
   color:white;
   text-align:center;
   padding:34px 20px;
 }
-
-footer p{
-  color:#d3cce8;
-  margin:6px 0;
-}
+footer p{color:#d3cce8;margin:6px 0}
 
 /* RESPONSIVE */
-
 @media(max-width:1100px){
-  .dkr-nav{
-    flex-direction:column;
-    gap:14px;
-  }
-
-  .dkr-menu{
-    justify-content:center;
-  }
-
-  .hero-grid{
-    gap:32px;
-  }
-
-  .hero-heading{
-    font-size:clamp(36px,4vw,49px);
-    letter-spacing:-1.8px;
-  }
+  .dkr-nav{flex-direction:column;gap:12px}
+  .dkr-menu{justify-content:center}
+  .hero-grid{gap:30px}
 }
-
 @media(max-width:800px){
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero{
-    padding:30px 0 55px;
-  }
-
-  .hero-visual{
-    max-width:510px;
-    margin:15px auto 0;
-  }
-
-  .grid,
-  .portfolio-grid,
-  .pricing-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
+  .hero-grid,.about-layout{grid-template-columns:1fr}
+  .hero{padding:27px 0 52px}
+  .hero-visual{max-width:500px;margin:10px auto 0}
+  .about-layout{gap:23px}
+  .grid,.portfolio-grid,.pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-grid{grid-template-columns:1fr}
 }
-
 @media(max-width:550px){
-  html{
-    scroll-padding-top:200px;
+  html{scroll-padding-top:185px}
+  .dkr-nav{padding:12px 10px}
+  .dkr-brand-icon{width:39px;height:39px;font-size:21px}
+  .dkr-brand-name{font-size:23px}
+  .dkr-brand-subtitle{font-size:8px;letter-spacing:2.2px}
+  .dkr-menu{gap:2px}
+  .dkr-menu a{font-size:12px;padding:8px 9px}
+  .dkr-menu .dkr-cta{padding:9px 13px;margin-left:0}
+  .hero{padding:22px 0 45px}
+  .hero-heading{font-size:clamp(34px,8.5vw,44px);letter-spacing:-1.5px}
+  .hero-secondary{font-size:13px}
+  .hero-description{font-size:14px}
+  .hero-specialties{gap:8px}
+  .hero-specialties span{font-size:9px}
+  #about{padding:38px 0 43px}
+  .about-heading{font-size:34px;letter-spacing:-1.2px}
+  .about-right{padding:23px 20px}
+  .about-lead{font-size:16px}
+  .about-description{font-size:14px}
+  .about-cards{grid-template-columns:1fr;gap:9px}
+  .about-mini-card{
+    display:flex;
+    align-items:center;
+    text-align:left;
+    gap:13px;
+    padding:11px 14px;
   }
-
-  .dkr-nav{
-    padding:13px 10px;
-  }
-
-  .dkr-brand-icon{
-    width:40px;
-    height:40px;
-    font-size:22px;
-  }
-
-  .dkr-brand-name{
-    font-size:24px;
-  }
-
-  .dkr-brand-subtitle{
-    font-size:8px;
-    letter-spacing:2.3px;
-  }
-
-  .dkr-menu{
-    gap:3px;
-  }
-
-  .dkr-menu a{
-    padding:8px 10px;
-    font-size:12px;
-  }
-
-  .dkr-menu .dkr-cta{
-    padding:9px 14px;
-    margin-left:0;
-  }
-
-  .hero{
-    padding:22px 0 45px;
-  }
-
-  .hero-content{
-    padding-top:5px;
-  }
-
-  .hero-heading{
-    font-size:clamp(34px,8.5vw,44px);
-    letter-spacing:-1.5px;
-    margin-top:22px;
-  }
-
-  .hero-kicker{
-    font-size:9px;
-    letter-spacing:1px;
-  }
-
-  .hero-secondary{
-    font-size:13px;
-  }
-
-  .hero-description{
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  .hero-actions{
-    gap:10px;
-  }
-
-  .hero-btn{
-    padding:13px 17px;
-    font-size:12px;
-  }
-
-  .hero-specialties{
-    gap:8px;
-  }
-
-  .hero-specialties span{
-    font-size:9px;
-  }
-
-  #about{
-    padding:36px 0 40px;
-  }
-
-  .about-heading{
-    font-size:31px;
-    letter-spacing:-1px;
-  }
-
-  .about-description{
-    font-size:15px;
-    line-height:1.75;
-  }
-
-  .about-expertise{
-    gap:8px;
-  }
-
-  .about-expertise span{
-    font-size:11px;
-    padding:8px 12px;
-  }
-
-  .grid,
-  .portfolio-grid,
-  .pricing-grid{
-    grid-template-columns:1fr;
-  }
-
-  section{
-    padding:60px 0;
-  }
-
-  .portfolio-card img{
-    height:350px;
-  }
-
-  .floating-wa{
-    font-size:13px;
-    padding:12px 16px;
-  }
-
-  .pricing-section{
-    padding:70px 0;
-  }
-
-  .plan-cost{
-    font-size:35px;
-  }
+  .about-mini-icon{margin:0;flex-shrink:0}
+  .grid,.portfolio-grid,.pricing-grid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .portfolio-card img{height:350px}
+  .pricing-section{padding:70px 0}
+  .plan-cost{font-size:35px}
+  .floating-wa{font-size:13px;padding:12px 16px}
 }
-
 @media(prefers-reduced-motion:reduce){
-  *,
-  *::before,
-  *::after{
-    animation-duration:.01ms!important;
+  *,*::before,*::after{
     transition-duration:.01ms!important;
     scroll-behavior:auto!important;
   }
@@ -1132,15 +746,12 @@ footer p{
 
 <body>
 
-<!-- HEADER -->
-
 <header class="dkr-header">
   <nav class="dkr-nav" aria-label="Main navigation">
-
     <a href="#home" class="dkr-brand">
       <span class="dkr-brand-icon" aria-hidden="true">✦</span>
       <span class="dkr-brand-text">
-        <span class="dkr-brand-name">DKRAYS</span>
+        <span class="dkr-brand-name">DK<span>RAYS</span></span>
         <span class="dkr-brand-subtitle">INNOVATION LABS</span>
       </span>
     </a>
@@ -1151,27 +762,22 @@ footer p{
       <a href="#portfolio">Portfolio</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
-
       <a class="dkr-cta"
          href="https://wa.me/923712264329"
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         ✦ Let's Talk ↗
       </a>
     </div>
-
   </nav>
 </header>
 
 <main>
 
 <!-- HERO -->
-
 <div class="hero" id="home">
   <div class="container hero-grid">
 
     <div class="hero-content">
-
       <div class="hero-kicker">
         <span class="kicker-dot"></span>
         DKRAYS / CREATIVE INTELLIGENCE STUDIO
@@ -1179,7 +785,7 @@ footer p{
 
       <h1 class="hero-heading">
         <span class="line">Where Creativity</span>
-        <span class="line gradient-word">Meets Intelligence.</span>
+        <span class="line highlight">Meets Intelligence.</span>
       </h1>
 
       <div class="hero-secondary">
@@ -1187,25 +793,20 @@ footer p{
       </div>
 
       <p class="hero-description">
-        We bring imagination and intelligent technology
-        together to craft distinctive brand identities,
-        captivating product campaigns, and extraordinary
-        visual experiences.
+        We bring imagination and intelligent technology together
+        to craft distinctive brand identities, captivating product
+        campaigns, and extraordinary visual experiences.
       </p>
 
       <div class="hero-actions">
-
         <a href="#portfolio" class="hero-btn primary">
-          Explore Our Work <span>↗</span>
+          Explore Our Work ↗
         </a>
-
         <a href="https://wa.me/923712264329"
-           target="_blank"
-           rel="noopener noreferrer"
+           target="_blank" rel="noopener noreferrer"
            class="hero-btn secondary">
-          Start a Project <span>→</span>
+          Start a Project →
         </a>
-
       </div>
 
       <div class="hero-specialties">
@@ -1215,62 +816,75 @@ footer p{
         <span class="sep">/</span>
         <span>Brand Innovation</span>
       </div>
-
     </div>
 
     <div class="hero-visual">
-      <img src="logo.png"
-           alt="DKRAYS Innovation Labs official logo">
-
-      <div class="visual-caption">
-        <span>✦</span>
-        DESIGN × INTELLIGENCE
-      </div>
+      <img src="logo.png" alt="DKRAYS Innovation Labs official logo">
+      <div class="visual-caption">✦ DESIGN × INTELLIGENCE</div>
     </div>
 
   </div>
 </div>
 
-<!-- UPDATED ABOUT -->
-
+<!-- PREMIUM ABOUT SECTION -->
 <section id="about">
   <div class="container">
 
-    <div class="about-inner">
+    <div class="about-layout">
 
-      <div class="about-eyebrow">
-        The Studio Behind The Ideas
+      <div class="about-left">
+        <div class="about-label">
+          About Our Studio
+        </div>
+
+        <h2 class="about-heading">
+          We Don't Just Design.
+          <span class="gradient-text">
+            We Make Brands Unforgettable.
+          </span>
+        </h2>
       </div>
 
-      <h2 class="about-heading">
-        Where Vision Meets
-        <span class="gradient-text">Innovation.</span>
-      </h2>
+      <div class="about-right">
+        <p class="about-lead">
+          Where human imagination meets intelligent innovation.
+        </p>
 
-      <p class="about-description">
-        At DKRAYS Innovation Labs, we blend creative thinking,
-        intelligent technology, and strategic design to transform
-        ideas into powerful visual experiences. From distinctive
-        brand identities to premium product campaigns, we help
-        businesses communicate with clarity, creativity, and impact.
-      </p>
+        <p class="about-description">
+          At DKRAYS Innovation Labs, we combine creative strategy,
+          thoughtful design, and AI-powered innovation to shape
+          memorable brand experiences. From distinctive visual
+          identities to premium product campaigns, we help
+          businesses communicate with clarity, creativity,
+          and lasting impact.
+        </p>
 
-      <div class="about-expertise">
-        <span>Creative Strategy</span>
-        <span>AI-Powered Design</span>
-        <span>Brand Storytelling</span>
+        <div class="about-cards">
+          <div class="about-mini-card">
+            <div class="about-mini-icon">✦</div>
+            <strong>Creative Direction</strong>
+          </div>
+
+          <div class="about-mini-card">
+            <div class="about-mini-icon">◇</div>
+            <strong>Intelligent Design</strong>
+          </div>
+
+          <div class="about-mini-card">
+            <div class="about-mini-icon">↗</div>
+            <strong>Brand Experiences</strong>
+          </div>
+        </div>
+
       </div>
-
     </div>
 
   </div>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services" class="soft">
   <div class="container">
-
     <div class="section-title">
       <div class="eyebrow">What We Offer</div>
       <h2>Our Creative Services</h2>
@@ -1278,7 +892,6 @@ footer p{
     </div>
 
     <div class="grid">
-
       <div class="card">
         <div class="symbol">🎨</div>
         <h3>Social Media Post Design</h3>
@@ -1320,21 +933,17 @@ footer p{
         <p>Distinctive logo concepts created around your brand identity.</p>
         <div class="price">Rs. 3,000 <small>/ logo</small></div>
       </div>
-
     </div>
 
     <p style="text-align:center;color:#6d6c83;margin-top:28px">
       Introductory rates • Two revision rounds included • Complex projects quoted separately
     </p>
-
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-
 <section id="portfolio">
   <div class="container">
-
     <div class="section-title">
       <div class="eyebrow">Creative Showcase</div>
       <h2>Our Work</h2>
@@ -1343,15 +952,8 @@ footer p{
 
     <div class="portfolio-grid">
 
-      <a class="portfolio-card"
-         href="fashion-maryam.webp"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <img src="fashion-maryam.webp"
-             alt="Fashion and Hijab Visuals"
-             loading="lazy">
-
+      <a class="portfolio-card" href="fashion-maryam.webp" target="_blank" rel="noopener noreferrer">
+        <img src="fashion-maryam.webp" alt="Fashion and Hijab Visuals" loading="lazy">
         <div class="portfolio-body">
           <h3>Fashion & Hijab Visuals</h3>
           <p>Modest fashion styling and elegant scarf presentation.</p>
@@ -1359,15 +961,8 @@ footer p{
         </div>
       </a>
 
-      <a class="portfolio-card"
-         href="product-yara.webp"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <img src="product-yara.webp"
-             alt="Yara Perfume Advertisement"
-             loading="lazy">
-
+      <a class="portfolio-card" href="product-yara.webp" target="_blank" rel="noopener noreferrer">
+        <img src="product-yara.webp" alt="Yara Perfume Advertisement" loading="lazy">
         <div class="portfolio-body">
           <h3>Product Advertisements</h3>
           <p>Premium perfume advertising with refined product styling.</p>
@@ -1375,15 +970,8 @@ footer p{
         </div>
       </a>
 
-      <a class="portfolio-card"
-         href="social-grammar.webp"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <img src="social-grammar.webp"
-             alt="RAYS Academy Grammar Design"
-             loading="lazy">
-
+      <a class="portfolio-card" href="social-grammar.webp" target="_blank" rel="noopener noreferrer">
+        <img src="social-grammar.webp" alt="RAYS Academy Grammar Design" loading="lazy">
         <div class="portfolio-body">
           <h3>Social Media Designs</h3>
           <p>Educational social media artwork for RAYS Academy.</p>
@@ -1391,15 +979,8 @@ footer p{
         </div>
       </a>
 
-      <a class="portfolio-card"
-         href="promo-ielts.webp"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <img src="promo-ielts.webp"
-             alt="IELTS Promotional Poster"
-             loading="lazy">
-
+      <a class="portfolio-card" href="promo-ielts.webp" target="_blank" rel="noopener noreferrer">
+        <img src="promo-ielts.webp" alt="IELTS Promotional Poster" loading="lazy">
         <div class="portfolio-body">
           <h3>Promotional Posters</h3>
           <p>IELTS class promotional campaign for RAYS Academy.</p>
@@ -1407,15 +988,8 @@ footer p{
         </div>
       </a>
 
-      <a class="portfolio-card"
-         href="catalogue.webp"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <img src="catalogue.webp"
-             alt="Product Catalogue"
-             loading="lazy">
-
+      <a class="portfolio-card" href="catalogue.webp" target="_blank" rel="noopener noreferrer">
+        <img src="catalogue.webp" alt="Product Catalogue" loading="lazy">
         <div class="portfolio-body">
           <h3>Product Catalogues</h3>
           <p>Multi-page product catalogue and layout showcase.</p>
@@ -1423,15 +997,8 @@ footer p{
         </div>
       </a>
 
-      <a class="portfolio-card"
-         href="branding.webp"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <img src="branding.webp"
-             alt="DKRAYS Brand Identity"
-             loading="lazy">
-
+      <a class="portfolio-card" href="branding.webp" target="_blank" rel="noopener noreferrer">
+        <img src="branding.webp" alt="DKRAYS Brand Identity" loading="lazy">
         <div class="portfolio-body">
           <h3>Logo & Brand Identity</h3>
           <p>Coordinated brand identity, logo and stationery mockups.</p>
@@ -1444,16 +1011,11 @@ footer p{
 </section>
 
 <!-- PRICING -->
-
 <section id="pricing" class="pricing-section">
   <div class="container">
-
     <div class="section-title">
       <div class="eyebrow">Flexible Monthly Plans</div>
-      <h2>
-        Find Your Perfect
-        <span class="gradient-text">Creative Plan</span>
-      </h2>
+      <h2>Find Your Perfect <span class="gradient-text">Creative Plan</span></h2>
       <p>Consistent, beautiful designs to help your brand shine every month.</p>
     </div>
 
@@ -1467,17 +1029,14 @@ footer p{
         <div class="plan-cost">Rs. 7,000 <span>/ month</span></div>
         <div class="plan-divider"></div>
         <div class="plan-includes">What's included</div>
-
         <ul class="plan-features">
           <li>8 social media posts</li>
           <li>Basic editing</li>
           <li>Brand-aligned styling</li>
         </ul>
-
         <a class="plan-button outline"
            href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Starter%20Package."
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           Choose Starter <span>↗</span>
         </a>
       </article>
@@ -1491,17 +1050,14 @@ footer p{
         <div class="plan-cost">Rs. 12,000 <span>/ month</span></div>
         <div class="plan-divider"></div>
         <div class="plan-includes">What's included</div>
-
         <ul class="plan-features">
           <li>12 social media posts</li>
           <li>3 story designs</li>
           <li>Creative captions optional</li>
         </ul>
-
         <a class="plan-button filled"
            href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Growth%20Package."
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           Choose Growth <span>↗</span>
         </a>
       </article>
@@ -1514,18 +1070,15 @@ footer p{
         <div class="plan-cost">Rs. 22,000 <span>/ month</span></div>
         <div class="plan-divider"></div>
         <div class="plan-includes">What's included</div>
-
         <ul class="plan-features">
           <li>20 social media posts</li>
           <li>5 story designs</li>
           <li>2 product advertisements</li>
           <li>Creative captions optional</li>
         </ul>
-
         <a class="plan-button outline"
            href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Premium%20Package."
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           Choose Premium <span>↗</span>
         </a>
       </article>
@@ -1534,29 +1087,22 @@ footer p{
 
     <p class="pricing-footnote">
       ✦ Two revision rounds included · Need something different?
-
       <a href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20would%20like%20a%20custom%20monthly%20design%20package."
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         Request a custom quote →
       </a>
     </p>
-
   </div>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
   <div class="container contact-shell">
 
-    <span class="contact-kicker">
-      ✦ Let's collaborate
-    </span>
+    <span class="contact-kicker">✦ Let's collaborate</span>
 
     <h2 class="contact-heading">
-      Let's Bring Your
-      <span class="gradient-text">Vision to Life.</span>
+      Let's Bring Your <span class="gradient-text">Vision to Life.</span>
     </h2>
 
     <p class="contact-intro">
@@ -1566,8 +1112,7 @@ footer p{
 
     <a class="contact-main-cta"
        href="https://wa.me/923712264329?text=Hello%20DKRAYS%20Innovation%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20creative%20project."
-       target="_blank"
-       rel="noopener noreferrer">
+       target="_blank" rel="noopener noreferrer">
       💬 Discuss Your Project on WhatsApp ↗
     </a>
 
@@ -1579,36 +1124,26 @@ footer p{
 
       <a class="contact-card whatsapp"
          href="https://wa.me/923712264329"
-         target="_blank"
-         rel="noopener noreferrer">
-
+         target="_blank" rel="noopener noreferrer">
         <span class="contact-icon">💬</span>
         <strong>WhatsApp</strong>
         <span class="contact-detail">03712264329</span>
         <span class="contact-link">Start a conversation ↗</span>
       </a>
 
-      <a class="contact-card"
-         href="mailto:dkrays.innovationlabs@gmail.com">
-
+      <a class="contact-card" href="mailto:dkrays.innovationlabs@gmail.com">
         <span class="contact-icon">✉️</span>
         <strong>Email Us</strong>
-        <span class="contact-detail">
-          dkrays.innovationlabs@gmail.com
-        </span>
+        <span class="contact-detail">dkrays.innovationlabs@gmail.com</span>
         <span class="contact-link">Send your project brief ↗</span>
       </a>
 
       <a class="contact-card"
          href="https://www.instagram.com/_dkrays.innovationlabs/"
-         target="_blank"
-         rel="noopener noreferrer">
-
+         target="_blank" rel="noopener noreferrer">
         <span class="contact-icon">📸</span>
         <strong>Instagram</strong>
-        <span class="contact-detail">
-          @_dkrays.innovationlabs
-        </span>
+        <span class="contact-detail">@_dkrays.innovationlabs</span>
         <span class="contact-link">Explore our creative work ↗</span>
       </a>
 
@@ -1617,22 +1152,16 @@ footer p{
     <p class="contact-footnote">
       DKRAYS Innovation Labs · Where Creativity Meets Intelligence.
     </p>
-
   </div>
 </section>
 
 </main>
 
-<!-- FLOATING WHATSAPP -->
-
 <a class="floating-wa"
    href="https://wa.me/923712264329"
-   target="_blank"
-   rel="noopener noreferrer">
+   target="_blank" rel="noopener noreferrer">
   💬 WhatsApp Us
 </a>
-
-<!-- FOOTER -->
 
 <footer>
   <strong>DKRAYS INNOVATION LABS</strong>
