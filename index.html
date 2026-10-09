@@ -16,7 +16,7 @@
   --gradient: linear-gradient(110deg,#7853df,#388fef,#ed75c7);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -26,68 +26,167 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 .container { max-width: 1120px; margin: auto; padding: 0 24px; }
-header {
-  position: sticky; top: 0; z-index: 10;
-  background: rgba(255,255,255,.95);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(14px);
+
+/* PREMIUM DKRAYS NAVIGATION */
+.dkr-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid #ece5ff;
+  box-shadow: 0 7px 28px rgba(90,65,160,.07);
 }
-nav {
-  min-height: 76px; display: flex;
-  align-items: center; justify-content: space-between;
-  gap: 18px; flex-wrap: wrap;
+.dkr-nav {
+  max-width: 1320px;
+  margin: auto;
+  min-height: 85px;
+  padding: 14px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
 }
-.brand { font-weight: 850; letter-spacing: 1px; font-size: 23px; }
-.brand span { color: var(--purple); }
-.navlinks { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; }
-.navlinks a:hover { color: var(--purple); }
+.dkr-logo {
+  font-size: 29px;
+  font-weight: 900;
+  color: #20203d;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+.dkr-logo span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dkr-menu {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dkr-menu a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 30px;
+  color: #34304f;
+  font-size: 14px;
+  font-weight: 650;
+  transition: background .25s, color .25s, transform .25s;
+}
+.dkr-menu a:hover,
+.dkr-menu a:focus-visible {
+  background: #f1ecff;
+  color: #7853df;
+  transform: translateY(-2px);
+}
+.dkr-menu .dkr-cta {
+  background: var(--gradient);
+  color: white;
+  padding: 12px 22px;
+  box-shadow: 0 6px 20px rgba(120,83,223,.24);
+  margin-left: 6px;
+}
+.dkr-menu .dkr-cta:hover,
+.dkr-menu .dkr-cta:focus-visible {
+  background: linear-gradient(110deg,#6945d5,#347ce3,#bf5cc2);
+  color: white;
+}
+
+/* GENERAL BUTTONS */
 .btn {
-  display: inline-block; padding: 13px 23px;
-  border-radius: 50px; font-weight: 700;
+  display: inline-block;
+  padding: 13px 23px;
+  border-radius: 50px;
+  font-weight: 700;
   border: 1px solid var(--line);
   transition: transform .2s;
 }
 .btn:hover { transform: translateY(-2px); }
 .primary { background: var(--gradient); color: white; border: none; }
 .secondary { background: white; color: var(--purple); }
+
+/* HERO */
 .hero {
   padding: 85px 0 95px;
   background:
     radial-gradient(circle at 10% 20%,#e9e6ff 0,transparent 38%),
-    radial-gradient(circle at 90% 70%,#ffe4f7 0,transparent 40%),#fff;
+    radial-gradient(circle at 90% 70%,#ffe4f7 0,transparent 40%),
+    #fff;
 }
 .hero-grid {
-  display: grid; grid-template-columns: 1.15fr 1fr;
-  gap: 50px; align-items: center;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 .eyebrow {
-  text-transform: uppercase; letter-spacing: 3px;
-  font-size: 12px; font-weight: 800; color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--purple);
 }
-h1 { font-size: clamp(38px,5vw,68px); line-height: 1.12; margin: 18px 0; }
+h1 {
+  font-size: clamp(38px,5vw,68px);
+  line-height: 1.12;
+  margin: 18px 0;
+}
 .gradient-text {
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.lead { font-size: 18px; color: var(--muted); max-width: 550px; }
-.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.lead {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 550px;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
 .logo-frame {
-  border-radius: 32px; padding: 18px;
+  border-radius: 32px;
+  padding: 18px;
   background: rgba(255,255,255,.8);
   box-shadow: 0 22px 70px #6c57bf20;
   border: 1px solid var(--line);
 }
-.logo-frame img { display: block; width: 100%; border-radius: 22px; }
+.logo-frame img {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+}
+
+/* GENERAL SECTIONS */
 section { padding: 85px 0; }
-.section-title { text-align: center; margin-bottom: 40px; }
-.section-title h2 { font-size: clamp(30px,4vw,43px); margin: 8px 0; }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-size: clamp(30px,4vw,43px);
+  margin: 8px 0;
+}
 .section-title p { color: var(--muted); }
 .soft { background: #faf9ff; }
-.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
 .card {
-  padding: 28px; background: white;
+  padding: 28px;
+  background: white;
   border: 1px solid var(--line);
   border-radius: 22px;
   box-shadow: 0 10px 35px #2d1d6710;
@@ -96,25 +195,36 @@ section { padding: 85px 0; }
 .card p { color: var(--muted); margin: 0; }
 .symbol { font-size: 32px; }
 .price {
-  margin-top: 24px; font-size: 30px;
-  font-weight: 850; color: var(--purple);
+  margin-top: 24px;
+  font-size: 30px;
+  font-weight: 850;
+  color: var(--purple);
 }
-.price small { font-size: 13px; font-weight: 500; color: var(--muted); }
+.price small {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
 .about-text {
-  max-width: 800px; margin: auto;
-  text-align: center; color: var(--muted); font-size: 18px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 18px;
 }
 
-/* Portfolio */
+/* PORTFOLIO */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 22px;
 }
 .portfolio-card {
-  display: block; background: #fff;
+  display: block;
+  background: #fff;
   border: 1px solid var(--line);
-  border-radius: 22px; overflow: hidden;
+  border-radius: 22px;
+  overflow: hidden;
   box-shadow: 0 12px 35px #31235a12;
   transition: transform .2s,box-shadow .2s;
 }
@@ -123,16 +233,30 @@ section { padding: 85px 0; }
   box-shadow: 0 20px 40px #31235a22;
 }
 .portfolio-card img {
-  display: block; width: 100%; height: 300px;
-  object-fit: cover; object-position: top;
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
   background: #f5f0ff;
 }
 .portfolio-body { padding: 18px 20px 22px; }
-.portfolio-body h3 { font-size: 19px; margin: 0 0 6px; }
-.portfolio-body p { font-size: 14px; color: var(--muted); margin: 0 0 12px; }
-.view { font-size: 13px; color: var(--purple); font-weight: 700; }
+.portfolio-body h3 {
+  font-size: 19px;
+  margin: 0 0 6px;
+}
+.portfolio-body p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.view {
+  font-size: 13px;
+  color: var(--purple);
+  font-weight: 700;
+}
 
-/* Premium Pricing */
+/* PREMIUM PRICING */
 .pricing-section {
   padding: 95px 0 105px;
   background:
@@ -142,7 +266,8 @@ section { padding: 85px 0; }
 }
 .pricing-section .section-title { margin-bottom: 55px; }
 .pricing-section .section-title p {
-  max-width: 550px; margin: 12px auto 0;
+  max-width: 550px;
+  margin: 12px auto 0;
 }
 .pricing-grid {
   display: grid;
@@ -151,9 +276,12 @@ section { padding: 85px 0; }
   align-items: stretch;
 }
 .plan-card {
-  position: relative; display: flex; flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 32px 28px 28px;
-  border: 1px solid #e5def5; border-radius: 28px;
+  border: 1px solid #e5def5;
+  border-radius: 28px;
   background: #fff;
   box-shadow: 0 15px 40px rgba(63,39,120,.07);
   transition: transform .2s,box-shadow .2s;
@@ -169,132 +297,199 @@ section { padding: 85px 0; }
   box-shadow: 0 22px 55px rgba(112,72,216,.15);
 }
 .popular-ribbon {
-  position: absolute; top: -19px; left: 50%;
+  position: absolute;
+  top: -19px;
+  left: 50%;
   transform: translateX(-50%);
-  white-space: nowrap; padding: 9px 20px;
+  white-space: nowrap;
+  padding: 9px 20px;
   border-radius: 30px;
   background: linear-gradient(110deg,#7654df,#a25ee9,#db79c6);
-  color: white; font-size: 12px;
-  letter-spacing: 1px; font-weight: 800;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 800;
 }
 .plan-icon {
-  display: grid; place-items: center;
-  width: 52px; height: 52px; border-radius: 17px;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 17px;
   background: linear-gradient(135deg,#eee7ff,#fbe5f6);
-  color: #7853df; font-size: 29px;
+  color: #7853df;
+  font-size: 29px;
 }
 .plan-tier {
-  font-size: 11px; letter-spacing: 1.8px;
-  font-weight: 800; color: #8d72d6; margin-top: 22px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+  color: #8d72d6;
+  margin-top: 22px;
 }
 .plan-card h3 {
-  font-size: 30px; line-height: 1.2;
+  font-size: 30px;
+  line-height: 1.2;
   margin: 7px 0 9px;
 }
 .plan-intro {
-  color: #77738e; font-size: 14px;
-  min-height: 45px; margin: 0;
+  color: #77738e;
+  font-size: 14px;
+  min-height: 45px;
+  margin: 0;
 }
 .plan-cost {
   font-size: clamp(27px,2.5vw,38px);
-  line-height: 1.2; letter-spacing: -1.3px;
-  font-weight: 850; color: #6f46d6;
-  margin: 22px 0 20px; white-space: nowrap;
+  line-height: 1.2;
+  letter-spacing: -1.3px;
+  font-weight: 850;
+  color: #6f46d6;
+  margin: 22px 0 20px;
+  white-space: nowrap;
 }
 .plan-cost span {
-  font-size: 13px; letter-spacing: 0;
-  font-weight: 500; color: #77738e;
+  font-size: 13px;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: #77738e;
 }
 .plan-divider { height: 1px; background: #ebe6f5; }
 .plan-includes {
-  font-size: 13px; font-weight: 800;
+  font-size: 13px;
+  font-weight: 800;
   margin: 22px 0 8px;
 }
 .plan-features {
-  list-style: none; padding: 0;
-  margin: 0 0 30px; display: grid;
-  gap: 14px; color: #48465d;
-  font-size: 14px; flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: grid;
+  gap: 14px;
+  color: #48465d;
+  font-size: 14px;
+  flex: 1;
 }
 .plan-features li {
-  display: flex; align-items: flex-start; gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 .plan-features li::before {
-  content: "✓"; display: grid; place-items: center;
-  flex-shrink: 0; width: 21px; height: 21px;
-  border-radius: 50%; background: #efe8ff;
-  color: #7450d9; font-weight: 900; font-size: 12px;
+  content: "✓";
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #efe8ff;
+  color: #7450d9;
+  font-weight: 900;
+  font-size: 12px;
 }
 .plan-button {
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 15px 19px; border-radius: 14px;
-  font-size: 14px; font-weight: 800;
+  padding: 15px 19px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 800;
   transition: transform .2s;
 }
 .plan-button:hover { transform: translateY(-2px); }
 .plan-button.outline {
-  border: 1px solid #c8b7ef; color: #7450d9;
+  border: 1px solid #c8b7ef;
+  color: #7450d9;
   background: #f9f6ff;
 }
 .plan-button.filled {
-  background: var(--gradient); color: #fff;
+  background: var(--gradient);
+  color: #fff;
 }
 .pricing-footnote {
-  text-align: center; color: #77738e;
-  margin: 35px auto 0; font-size: 14px;
+  text-align: center;
+  color: #77738e;
+  margin: 35px auto 0;
+  font-size: 14px;
 }
-.pricing-footnote a { color: #7853df; font-weight: 750; }
+.pricing-footnote a {
+  color: #7853df;
+  font-weight: 750;
+}
 
-/* Contact */
+/* CONTACT */
 #contact {
   background: linear-gradient(145deg,#faf7ff,#f4f7ff,#fff5fb);
-  position: relative; overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .contact-shell {
-  position: relative; max-width: 1080px;
-  margin: auto; text-align: center;
+  position: relative;
+  max-width: 1080px;
+  margin: auto;
+  text-align: center;
 }
 .contact-kicker {
-  display: inline-flex; align-items: center;
-  padding: 9px 17px; border-radius: 99px;
-  background: white; border: 1px solid #e7defb;
-  color: #7950d9; font-weight: 750;
-  font-size: 12px; letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 17px;
+  border-radius: 99px;
+  background: white;
+  border: 1px solid #e7defb;
+  color: #7950d9;
+  font-weight: 750;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 .contact-heading {
   font-size: clamp(36px,5vw,58px);
-  line-height: 1.13; letter-spacing: -1px;
-  margin: 22px auto 14px; max-width: 790px;
+  line-height: 1.13;
+  letter-spacing: -1px;
+  margin: 22px auto 14px;
+  max-width: 790px;
 }
 .contact-intro {
-  font-size: 17px; color: #67647e;
-  max-width: 620px; margin: 0 auto 25px;
+  font-size: 17px;
+  color: #67647e;
+  max-width: 620px;
+  margin: 0 auto 25px;
 }
 .contact-main-cta {
-  display: inline-flex; align-items: center;
-  justify-content: center; gap: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   background: linear-gradient(115deg,#7753e4,#9c59e8,#e36ebf);
-  color: #fff; border-radius: 50px;
-  padding: 17px 29px; font-size: 17px;
+  color: #fff;
+  border-radius: 50px;
+  padding: 17px 29px;
+  font-size: 17px;
   font-weight: 800;
   box-shadow: 0 15px 32px #895cce3b;
 }
 .contact-prompt {
-  display: block; color: #77738c;
-  font-size: 13px; margin: 13px 0 38px;
+  display: block;
+  color: #77738c;
+  font-size: 13px;
+  margin: 13px 0 38px;
 }
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 18px; text-align: left;
+  gap: 18px;
+  text-align: left;
 }
 .contact-card {
-  display: flex; flex-direction: column;
-  align-items: flex-start; min-height: 220px;
-  border: 1px solid #e7e0f4; border-radius: 22px;
-  background: #fff; padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+  border: 1px solid #e7e0f4;
+  border-radius: 22px;
+  background: #fff;
+  padding: 26px;
   box-shadow: 0 10px 35px #2d1d670d;
   overflow-wrap: anywhere;
   transition: transform .2s;
@@ -305,52 +500,94 @@ section { padding: 85px 0; }
   border-color: #b9efd0;
 }
 .contact-icon {
-  display: grid; place-items: center;
-  width: 46px; height: 46px;
-  border-radius: 15px; background: #f1e9ff;
-  font-size: 22px; margin-bottom: 17px;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  background: #f1e9ff;
+  font-size: 22px;
+  margin-bottom: 17px;
 }
-.contact-card strong { font-size: 19px; margin-bottom: 4px; }
+.contact-card strong {
+  font-size: 19px;
+  margin-bottom: 4px;
+}
 .contact-detail {
-  font-size: 14px; font-weight: 650;
-  color: #7853df; overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 650;
+  color: #7853df;
+  overflow-wrap: anywhere;
 }
 .whatsapp .contact-detail { color: #18854c; }
 .contact-link {
-  margin-top: auto; padding-top: 22px;
-  color: #5143a0; font-weight: 750; font-size: 14px;
+  margin-top: auto;
+  padding-top: 22px;
+  color: #5143a0;
+  font-weight: 750;
+  font-size: 14px;
 }
 .contact-footnote {
-  margin: 32px auto 0; font-size: 14px; color: #77738c;
+  margin: 32px auto 0;
+  font-size: 14px;
+  color: #77738c;
 }
 .floating-wa {
-  position: fixed; right: 22px; bottom: 22px; z-index: 20;
-  background: #22c55e; color: white;
-  border-radius: 50px; padding: 14px 20px;
-  box-shadow: 0 8px 25px #22c55e55; font-weight: 750;
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 20;
+  background: #22c55e;
+  color: white;
+  border-radius: 50px;
+  padding: 14px 20px;
+  box-shadow: 0 8px 25px #22c55e55;
+  font-weight: 750;
 }
 footer {
-  background: #211b3d; color: white;
-  text-align: center; padding: 34px 20px;
+  background: #211b3d;
+  color: white;
+  text-align: center;
+  padding: 34px 20px;
 }
-footer p { color: #d3cce8; margin: 6px 0; }
+footer p {
+  color: #d3cce8;
+  margin: 6px 0;
+}
 
+/* RESPONSIVE DESIGN */
+@media(max-width:950px) {
+  .dkr-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .dkr-menu {
+    gap: 4px;
+  }
+  .dkr-menu a {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}
 @media(max-width:800px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .grid, .portfolio-grid, .pricing-grid {
+  .grid,.portfolio-grid,.pricing-grid {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
   .contact-grid { grid-template-columns: 1fr; }
   .hero { padding: 55px 0; }
-  nav { padding: 15px 0; }
   .plan-card.popular { order: -1; }
 }
 @media(max-width:550px) {
-  .grid, .portfolio-grid, .pricing-grid {
+  html { scroll-padding-top: 170px; }
+  .grid,.portfolio-grid,.pricing-grid {
     grid-template-columns: 1fr;
   }
   section { padding: 60px 0; }
-  .navlinks { gap: 12px; }
+  .dkr-logo { font-size: 26px; }
+  .dkr-nav { padding: 12px 10px; }
+  .dkr-menu a { padding: 8px 10px; font-size: 12px; }
+  .dkr-menu .dkr-cta { padding: 9px 14px; }
   .portfolio-card img { height: 350px; }
   .floating-wa { font-size: 13px; padding: 12px 16px; }
   .pricing-section { padding: 70px 0; }
@@ -361,27 +598,41 @@ footer p { color: #d3cce8; margin: 6px 0; }
 </head>
 
 <body>
-<header>
-<nav class="container">
-  <a class="brand" href="#">DK<span>RAYS</span></a>
-  <div class="navlinks">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+
+<!-- NEW PREMIUM HEADER -->
+<header class="dkr-header">
+  <nav class="dkr-nav" aria-label="Main navigation">
+    <a href="#home" class="dkr-logo">
+      DK<span>RAYS</span>
+    </a>
+
+    <div class="dkr-menu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+
+      <a class="dkr-cta"
+         href="https://wa.me/923712264329"
+         target="_blank"
+         rel="noopener noreferrer">
+        ✦ Let's Talk ↗
+      </a>
+    </div>
+  </nav>
 </header>
 
 <main>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="home">
   <div class="container hero-grid">
     <div>
       <div class="eyebrow">DKRAYS Innovation Labs</div>
-      <h1>Where <span class="gradient-text">Creativity Meets Intelligence.</span></h1>
+      <h1>
+        Where <span class="gradient-text">Creativity Meets Intelligence.</span>
+      </h1>
       <p class="lead">
         We turn ideas into beautiful, brand-focused visuals.
         Creative design and AI-assisted advertising solutions
@@ -404,287 +655,293 @@ footer p { color: #d3cce8; margin: 6px 0; }
 
 <!-- ABOUT -->
 <section id="about">
-<div class="container">
-  <div class="section-title">
-    <div class="eyebrow">Who We Are</div>
-    <h2>About DKRAYS</h2>
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Who We Are</div>
+      <h2>About DKRAYS</h2>
+    </div>
+    <p class="about-text">
+      DKRAYS Innovation Labs is a creative design studio
+      combining visual storytelling, thoughtful branding
+      and AI-assisted creativity. We help businesses
+      present their products and ideas through clean,
+      memorable and professional designs.
+    </p>
   </div>
-  <p class="about-text">
-    DKRAYS Innovation Labs is a creative design studio
-    combining visual storytelling, thoughtful branding
-    and AI-assisted creativity. We help businesses
-    present their products and ideas through clean,
-    memorable and professional designs.
-  </p>
-</div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="soft">
-<div class="container">
-  <div class="section-title">
-    <div class="eyebrow">What We Offer</div>
-    <h2>Our Creative Services</h2>
-    <p>Beautiful results. Transparent starting prices.</p>
-  </div>
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">What We Offer</div>
+      <h2>Our Creative Services</h2>
+      <p>Beautiful results. Transparent starting prices.</p>
+    </div>
 
-  <div class="grid">
-    <div class="card">
-      <div class="symbol">🎨</div>
-      <h3>Social Media Post Design</h3>
-      <p>Custom designs for Instagram, Facebook and business promotions.</p>
-      <div class="price">Rs. 1,000 <small>/ post</small></div>
-    </div>
-    <div class="card">
-      <div class="symbol">📢</div>
-      <h3>Premium Promotional Poster</h3>
-      <p>Professional posters for products, events, offers and campaigns.</p>
-      <div class="price">Rs. 1,500 <small>/ poster</small></div>
-    </div>
-    <div class="card">
-      <div class="symbol">✨</div>
-      <h3>AI Product Advertisement</h3>
-      <p>Premium product advertising visuals with AI-assisted styling.</p>
-      <div class="price">Rs. 2,000 <small>/ design</small></div>
-    </div>
-    <div class="card">
-      <div class="symbol">👗</div>
-      <h3>Fashion Model Styling Visual</h3>
-      <p>Elegant hijab, stole, abaya and fashion collection showcases.</p>
-      <div class="price">Rs. 2,500 <small>/ visual</small></div>
-    </div>
-    <div class="card">
-      <div class="symbol">📖</div>
-      <h3>Product Catalogue Design</h3>
-      <p>Attractive product catalogues for up to 10 items.</p>
-      <div class="price">Rs. 4,000 <small>/ catalogue</small></div>
-    </div>
-    <div class="card">
-      <div class="symbol">💎</div>
-      <h3>Logo Design</h3>
-      <p>Distinctive logo concepts created around your brand identity.</p>
-      <div class="price">Rs. 3,000 <small>/ logo</small></div>
-    </div>
-  </div>
+    <div class="grid">
+      <div class="card">
+        <div class="symbol">🎨</div>
+        <h3>Social Media Post Design</h3>
+        <p>Custom designs for Instagram, Facebook and business promotions.</p>
+        <div class="price">Rs. 1,000 <small>/ post</small></div>
+      </div>
 
-  <p style="text-align:center;color:#6d6c83;margin-top:28px">
-    Introductory rates • Two revision rounds included • Complex projects quoted separately
-  </p>
-</div>
+      <div class="card">
+        <div class="symbol">📢</div>
+        <h3>Premium Promotional Poster</h3>
+        <p>Professional posters for products, events, offers and campaigns.</p>
+        <div class="price">Rs. 1,500 <small>/ poster</small></div>
+      </div>
+
+      <div class="card">
+        <div class="symbol">✨</div>
+        <h3>AI Product Advertisement</h3>
+        <p>Premium product advertising visuals with AI-assisted styling.</p>
+        <div class="price">Rs. 2,000 <small>/ design</small></div>
+      </div>
+
+      <div class="card">
+        <div class="symbol">👗</div>
+        <h3>Fashion Model Styling Visual</h3>
+        <p>Elegant hijab, stole, abaya and fashion collection showcases.</p>
+        <div class="price">Rs. 2,500 <small>/ visual</small></div>
+      </div>
+
+      <div class="card">
+        <div class="symbol">📖</div>
+        <h3>Product Catalogue Design</h3>
+        <p>Attractive product catalogues for up to 10 items.</p>
+        <div class="price">Rs. 4,000 <small>/ catalogue</small></div>
+      </div>
+
+      <div class="card">
+        <div class="symbol">💎</div>
+        <h3>Logo Design</h3>
+        <p>Distinctive logo concepts created around your brand identity.</p>
+        <div class="price">Rs. 3,000 <small>/ logo</small></div>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:#6d6c83;margin-top:28px">
+      Introductory rates • Two revision rounds included • Complex projects quoted separately
+    </p>
+  </div>
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
-<div class="container">
-  <div class="section-title">
-    <div class="eyebrow">Creative Showcase</div>
-    <h2>Our Work</h2>
-    <p>Explore examples of the creative projects we design.</p>
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Creative Showcase</div>
+      <h2>Our Work</h2>
+      <p>Explore examples of the creative projects we design.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <a class="portfolio-card" href="fashion-maryam.webp" target="_blank" rel="noopener noreferrer">
+        <img src="fashion-maryam.webp" alt="Fashion and Hijab Visuals" loading="lazy">
+        <div class="portfolio-body">
+          <h3>Fashion & Hijab Visuals</h3>
+          <p>Modest fashion styling and elegant scarf presentation.</p>
+          <span class="view">View full design ↗</span>
+        </div>
+      </a>
+
+      <a class="portfolio-card" href="product-yara.webp" target="_blank" rel="noopener noreferrer">
+        <img src="product-yara.webp" alt="Yara Perfume Advertisement" loading="lazy">
+        <div class="portfolio-body">
+          <h3>Product Advertisements</h3>
+          <p>Premium perfume advertising with refined product styling.</p>
+          <span class="view">View full design ↗</span>
+        </div>
+      </a>
+
+      <a class="portfolio-card" href="social-grammar.webp" target="_blank" rel="noopener noreferrer">
+        <img src="social-grammar.webp" alt="RAYS Academy Grammar Design" loading="lazy">
+        <div class="portfolio-body">
+          <h3>Social Media Designs</h3>
+          <p>Educational social media artwork for RAYS Academy.</p>
+          <span class="view">View full design ↗</span>
+        </div>
+      </a>
+
+      <a class="portfolio-card" href="promo-ielts.webp" target="_blank" rel="noopener noreferrer">
+        <img src="promo-ielts.webp" alt="IELTS Promotional Poster" loading="lazy">
+        <div class="portfolio-body">
+          <h3>Promotional Posters</h3>
+          <p>IELTS class promotional campaign for RAYS Academy.</p>
+          <span class="view">View full design ↗</span>
+        </div>
+      </a>
+
+      <a class="portfolio-card" href="catalogue.webp" target="_blank" rel="noopener noreferrer">
+        <img src="catalogue.webp" alt="Product Catalogue" loading="lazy">
+        <div class="portfolio-body">
+          <h3>Product Catalogues</h3>
+          <p>Multi-page product catalogue and layout showcase.</p>
+          <span class="view">View full design ↗</span>
+        </div>
+      </a>
+
+      <a class="portfolio-card" href="branding.webp" target="_blank" rel="noopener noreferrer">
+        <img src="branding.webp" alt="DKRAYS Brand Identity" loading="lazy">
+        <div class="portfolio-body">
+          <h3>Logo & Brand Identity</h3>
+          <p>Coordinated brand identity, logo and stationery mockups.</p>
+          <span class="view">View full design ↗</span>
+        </div>
+      </a>
+
+    </div>
   </div>
-
-  <div class="portfolio-grid">
-    <a class="portfolio-card" href="fashion-maryam.webp" target="_blank">
-      <img src="fashion-maryam.webp" alt="Fashion and Hijab Visuals" loading="lazy">
-      <div class="portfolio-body">
-        <h3>Fashion & Hijab Visuals</h3>
-        <p>Modest fashion styling and elegant scarf presentation.</p>
-        <span class="view">View full design ↗</span>
-      </div>
-    </a>
-
-    <a class="portfolio-card" href="product-yara.webp" target="_blank">
-      <img src="product-yara.webp" alt="Yara Perfume Advertisement" loading="lazy">
-      <div class="portfolio-body">
-        <h3>Product Advertisements</h3>
-        <p>Premium perfume advertising with refined product styling.</p>
-        <span class="view">View full design ↗</span>
-      </div>
-    </a>
-
-    <a class="portfolio-card" href="social-grammar.webp" target="_blank">
-      <img src="social-grammar.webp" alt="RAYS Academy Grammar Design" loading="lazy">
-      <div class="portfolio-body">
-        <h3>Social Media Designs</h3>
-        <p>Educational social media artwork for RAYS Academy.</p>
-        <span class="view">View full design ↗</span>
-      </div>
-    </a>
-
-    <a class="portfolio-card" href="promo-ielts.webp" target="_blank">
-      <img src="promo-ielts.webp" alt="IELTS Promotional Poster" loading="lazy">
-      <div class="portfolio-body">
-        <h3>Promotional Posters</h3>
-        <p>IELTS class promotional campaign for RAYS Academy.</p>
-        <span class="view">View full design ↗</span>
-      </div>
-    </a>
-
-    <a class="portfolio-card" href="catalogue.webp" target="_blank">
-      <img src="catalogue.webp" alt="Product Catalogue" loading="lazy">
-      <div class="portfolio-body">
-        <h3>Product Catalogues</h3>
-        <p>Multi-page product catalogue and layout showcase.</p>
-        <span class="view">View full design ↗</span>
-      </div>
-    </a>
-
-    <a class="portfolio-card" href="branding.webp" target="_blank">
-      <img src="branding.webp" alt="DKRAYS Brand Identity" loading="lazy">
-      <div class="portfolio-body">
-        <h3>Logo & Brand Identity</h3>
-        <p>Coordinated brand identity, logo and stationery mockups.</p>
-        <span class="view">View full design ↗</span>
-      </div>
-    </a>
-  </div>
-</div>
 </section>
 
 <!-- PREMIUM MONTHLY PACKAGES -->
 <section id="pricing" class="pricing-section">
-<div class="container">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Flexible Monthly Plans</div>
+      <h2>Find Your Perfect <span class="gradient-text">Creative Plan</span></h2>
+      <p>Consistent, beautiful designs to help your brand shine every month.</p>
+    </div>
 
-  <div class="section-title">
-    <div class="eyebrow">Flexible Monthly Plans</div>
-    <h2>Find Your Perfect <span class="gradient-text">Creative Plan</span></h2>
-    <p>Consistent, beautiful designs to help your brand shine every month.</p>
+    <div class="pricing-grid">
+
+      <article class="plan-card">
+        <div class="plan-icon">✦</div>
+        <div class="plan-tier">FOR NEW BRANDS</div>
+        <h3>Starter</h3>
+        <p class="plan-intro">A beautiful beginning for your online presence.</p>
+        <div class="plan-cost">Rs. 7,000 <span>/ month</span></div>
+        <div class="plan-divider"></div>
+        <div class="plan-includes">What's included</div>
+        <ul class="plan-features">
+          <li>8 social media posts</li>
+          <li>Basic editing</li>
+          <li>Brand-aligned styling</li>
+        </ul>
+        <a class="plan-button outline"
+           href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Starter%20Package."
+           target="_blank" rel="noopener noreferrer">
+          Choose Starter <span>↗</span>
+        </a>
+      </article>
+
+      <article class="plan-card popular">
+        <div class="popular-ribbon">★ MOST POPULAR</div>
+        <div class="plan-icon">✧</div>
+        <div class="plan-tier">FOR GROWING BRANDS</div>
+        <h3>Growth</h3>
+        <p class="plan-intro">More creative content to build your presence.</p>
+        <div class="plan-cost">Rs. 12,000 <span>/ month</span></div>
+        <div class="plan-divider"></div>
+        <div class="plan-includes">What's included</div>
+        <ul class="plan-features">
+          <li>12 social media posts</li>
+          <li>3 story designs</li>
+          <li>Creative captions optional</li>
+        </ul>
+        <a class="plan-button filled"
+           href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Growth%20Package."
+           target="_blank" rel="noopener noreferrer">
+          Choose Growth <span>↗</span>
+        </a>
+      </article>
+
+      <article class="plan-card">
+        <div class="plan-icon">✺</div>
+        <div class="plan-tier">FOR ESTABLISHED BRANDS</div>
+        <h3>Premium</h3>
+        <p class="plan-intro">A complete creative presence for ambitious brands.</p>
+        <div class="plan-cost">Rs. 22,000 <span>/ month</span></div>
+        <div class="plan-divider"></div>
+        <div class="plan-includes">What's included</div>
+        <ul class="plan-features">
+          <li>20 social media posts</li>
+          <li>5 story designs</li>
+          <li>2 product advertisements</li>
+          <li>Creative captions optional</li>
+        </ul>
+        <a class="plan-button outline"
+           href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Premium%20Package."
+           target="_blank" rel="noopener noreferrer">
+          Choose Premium <span>↗</span>
+        </a>
+      </article>
+
+    </div>
+
+    <p class="pricing-footnote">
+      ✦ Two revision rounds included · Need something different?
+      <a href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20would%20like%20a%20custom%20monthly%20design%20package."
+         target="_blank" rel="noopener noreferrer">
+        Request a custom quote →
+      </a>
+    </p>
   </div>
-
-  <div class="pricing-grid">
-
-    <article class="plan-card">
-      <div class="plan-icon">✦</div>
-      <div class="plan-tier">FOR NEW BRANDS</div>
-      <h3>Starter</h3>
-      <p class="plan-intro">A beautiful beginning for your online presence.</p>
-      <div class="plan-cost">Rs. 7,000 <span>/ month</span></div>
-      <div class="plan-divider"></div>
-      <div class="plan-includes">What's included</div>
-      <ul class="plan-features">
-        <li>8 social media posts</li>
-        <li>Basic editing</li>
-        <li>Brand-aligned styling</li>
-      </ul>
-      <a class="plan-button outline"
-         href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Starter%20Package."
-         target="_blank" rel="noopener noreferrer">
-        Choose Starter <span>↗</span>
-      </a>
-    </article>
-
-    <article class="plan-card popular">
-      <div class="popular-ribbon">★ MOST POPULAR</div>
-      <div class="plan-icon">✧</div>
-      <div class="plan-tier">FOR GROWING BRANDS</div>
-      <h3>Growth</h3>
-      <p class="plan-intro">More creative content to build your presence.</p>
-      <div class="plan-cost">Rs. 12,000 <span>/ month</span></div>
-      <div class="plan-divider"></div>
-      <div class="plan-includes">What's included</div>
-      <ul class="plan-features">
-        <li>12 social media posts</li>
-        <li>3 story designs</li>
-        <li>Creative captions optional</li>
-      </ul>
-      <a class="plan-button filled"
-         href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Growth%20Package."
-         target="_blank" rel="noopener noreferrer">
-        Choose Growth <span>↗</span>
-      </a>
-    </article>
-
-    <article class="plan-card">
-      <div class="plan-icon">✺</div>
-      <div class="plan-tier">FOR ESTABLISHED BRANDS</div>
-      <h3>Premium</h3>
-      <p class="plan-intro">A complete creative presence for ambitious brands.</p>
-      <div class="plan-cost">Rs. 22,000 <span>/ month</span></div>
-      <div class="plan-divider"></div>
-      <div class="plan-includes">What's included</div>
-      <ul class="plan-features">
-        <li>20 social media posts</li>
-        <li>5 story designs</li>
-        <li>2 product advertisements</li>
-        <li>Creative captions optional</li>
-      </ul>
-      <a class="plan-button outline"
-         href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20am%20interested%20in%20the%20Premium%20Package."
-         target="_blank" rel="noopener noreferrer">
-        Choose Premium <span>↗</span>
-      </a>
-    </article>
-
-  </div>
-
-  <p class="pricing-footnote">
-    ✦ Two revision rounds included · Need something different?
-    <a href="https://wa.me/923712264329?text=Hello%20DKRAYS!%20I%20would%20like%20a%20custom%20monthly%20design%20package."
-       target="_blank" rel="noopener noreferrer">
-      Request a custom quote →
-    </a>
-  </p>
-
-</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<div class="container contact-shell">
+  <div class="container contact-shell">
 
-  <span class="contact-kicker">✦ Let's collaborate</span>
-  <h2 class="contact-heading">
-    Let's Bring Your <span class="gradient-text">Vision to Life.</span>
-  </h2>
-  <p class="contact-intro">
-    A product to showcase, a brand to build, or an idea worth sharing?
-    Tell us what you have in mind — we'll help turn it into something memorable.
-  </p>
+    <span class="contact-kicker">✦ Let's collaborate</span>
 
-  <a class="contact-main-cta"
-     href="https://wa.me/923712264329?text=Hello%20DKRAYS%20Innovation%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20creative%20project."
-     target="_blank" rel="noopener noreferrer">
-    💬 Discuss Your Project on WhatsApp ↗
-  </a>
+    <h2 class="contact-heading">
+      Let's Bring Your <span class="gradient-text">Vision to Life.</span>
+    </h2>
 
-  <span class="contact-prompt">
-    Have a question? Reach out through your preferred channel below.
-  </span>
+    <p class="contact-intro">
+      A product to showcase, a brand to build, or an idea worth sharing?
+      Tell us what you have in mind — we'll help turn it into something memorable.
+    </p>
 
-  <div class="contact-grid">
-
-    <a class="contact-card whatsapp"
-       href="https://wa.me/923712264329"
+    <a class="contact-main-cta"
+       href="https://wa.me/923712264329?text=Hello%20DKRAYS%20Innovation%20Labs%2C%20I%20would%20like%20to%20discuss%20a%20creative%20project."
        target="_blank" rel="noopener noreferrer">
-      <span class="contact-icon">💬</span>
-      <strong>WhatsApp</strong>
-      <span class="contact-detail">03712264329</span>
-      <span class="contact-link">Start a conversation ↗</span>
+      💬 Discuss Your Project on WhatsApp ↗
     </a>
 
-    <a class="contact-card"
-       href="mailto:dkrays.innovationlabs@gmail.com">
-      <span class="contact-icon">✉️</span>
-      <strong>Email Us</strong>
-      <span class="contact-detail">dkrays.innovationlabs@gmail.com</span>
-      <span class="contact-link">Send your project brief ↗</span>
-    </a>
+    <span class="contact-prompt">
+      Have a question? Reach out through your preferred channel below.
+    </span>
 
-    <a class="contact-card"
-       href="https://www.instagram.com/_dkrays.innovationlabs/"
-       target="_blank" rel="noopener noreferrer">
-      <span class="contact-icon">📸</span>
-      <strong>Instagram</strong>
-      <span class="contact-detail">@_dkrays.innovationlabs</span>
-      <span class="contact-link">Explore our creative work ↗</span>
-    </a>
+    <div class="contact-grid">
 
+      <a class="contact-card whatsapp"
+         href="https://wa.me/923712264329"
+         target="_blank" rel="noopener noreferrer">
+        <span class="contact-icon">💬</span>
+        <strong>WhatsApp</strong>
+        <span class="contact-detail">03712264329</span>
+        <span class="contact-link">Start a conversation ↗</span>
+      </a>
+
+      <a class="contact-card"
+         href="mailto:dkrays.innovationlabs@gmail.com">
+        <span class="contact-icon">✉️</span>
+        <strong>Email Us</strong>
+        <span class="contact-detail">dkrays.innovationlabs@gmail.com</span>
+        <span class="contact-link">Send your project brief ↗</span>
+      </a>
+
+      <a class="contact-card"
+         href="https://www.instagram.com/_dkrays.innovationlabs/"
+         target="_blank" rel="noopener noreferrer">
+        <span class="contact-icon">📸</span>
+        <strong>Instagram</strong>
+        <span class="contact-detail">@_dkrays.innovationlabs</span>
+        <span class="contact-link">Explore our creative work ↗</span>
+      </a>
+
+    </div>
+
+    <p class="contact-footnote">
+      DKRAYS Innovation Labs · Where Creativity Meets Intelligence.
+    </p>
   </div>
-
-  <p class="contact-footnote">
-    DKRAYS Innovation Labs · Where Creativity Meets Intelligence.
-  </p>
-
-</div>
 </section>
 
 </main>
